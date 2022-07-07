@@ -1,0 +1,141 @@
+Software Development Life Cycle Process
+
+SDLC is a process that defines the various stages involved in the development of software for delivering a high-quality 
+product.
+SDLC stages cover the complete life cycle of a software i.e. from inception to retirement of the product.
+
+SDLC Phases Given below are the various phases:
+
+1-Requirement gathering and analysis
+2-Design
+3-Implementation or coding
+4-Testing
+5-Deployment
+6-Maintenance
+
+1) Requirement Gathering and Analysis
+
+During this phase, all the relevant information is collected from the customer to develop a product as per their expectation.
+Any ambiguities must be resolved in this phase only.
+
+Business analyst and Project Manager set up a meeting with the customer to gather all the information
+like what the customer wants to build, who will be the end-user,what is the purpose of the product.
+Before building a product a core understanding or knowledge of the product is very important.
+
+For Example, A customer wants to have an application which involves money transactions.
+In this case, the requirement has to be clear like what kind of transactions will be done,
+how it will be done, in which currency it will be done.
+
+Once the requirement gathering is done, an analysis is done to check the feasibility of the development of a product.
+In case of any ambiguity, a call is set up for further discussion.
+
+Once the requirement is clearly understood, the SRS (Software Requirement Specification) document is created.
+This document should be thoroughly understood by the developers and also should be reviewed by the customer for
+future reference.
+
+2) Design
+In this phase, the requirement gathered in the SRS document is used as an input and software architecture that
+is used for implementing system development is derived.
+
+3) Implementation or Coding
+Implementation/Coding starts once the developer gets the Design document.
+The Software design is translated into source code. All the components of the software are implemented in this phase.
+
+4) Testing
+Testing starts once the coding is complete and the modules are released for testing. In this phase,
+the developed software is tested thoroughly and any defects found are assigned to developers to get them fixed.
+Retesting, regression testing is done until the point at which the software is as per the customer’s expectation.
+Testers refer SRS document to make sure that the software is as per the customer’s standard.
+
+5) Deployment
+Once the product is tested, it is deployed in the production environment or first UAT (User Acceptance testing)
+is done depending on the customer expectation.
+In the case of UAT, a replica of the production environment is created and the customer along with the
+developers does the testing. If the customer finds the application as expected,
+then sign off is provided by the customer to go live.
+
+6) Maintenance
+After the deployment of a product on the production environment,
+maintenance of the product i.e. if any issue comes up and needs to be fixed or any enhancement is to be done is taken
+care by the developers.
+
+------------------------------------------
+* Design validation is a testing process by which you prove (“validate”) that the device you’ve built works for
+the end user as intended.
+
+
+Design Validation Process:
+
+The design validation process will largely consist of testing the device.
+You can conduct this in a few ways, depending on circumstances.
+Activities can include:
+1-Comparing with similar equipment performing for similar purposes.
+2-Simulating functionality through mathematical modeling.
+3-Testing the final design to prove the system operates as defined in the user needs.
+4-Test plan, test cases, test execution records, and test results should be documented and maintained
+as a part of design records. Validation, in its entirety, is not the result of a single activity,
+but the collection of results from all validation activities.
+
+
+Design Verification Process:
+Verification can be reduced to a simple five-step process.         
+
+1=Identifying and Preparing
+Identify the best approach for conducting verification.
+Define what you will measure and how you will measure it. 
+You’ll also want to consider the required resources, manpower, and tools for successful verification.
+
+2-Planning
+Planning for verification occurs throughout the project life cycle.
+You’ll develop the test plan, which captures critical milestones.
+The plan must be updated whenever changes are made to design inputs.
+
+3-Developing
+Product development begins! It’s conducted using the methodology of choice (Scrum, Waterfall, hybrid, etc.).
+This part of the process also includes writing, test driving, and approving the test cases that will be used 
+for verification.
+
+4-Executing
+Test procedures are executed as planned. Any invalid results are documented and reviewed,
+and either accepted or logged as defects. Defects in the product are resolved and released,
+and regression testing is performed. A traceability matrix is created to verify that design inputs 
+identified in the verification test plan have been tested and passed.
+
+5-Reporting
+Reporting is performed at the end of each phase of verification.
+Detailed reports include configuration management and release reports,
+test results by testing type or product version, and issues found during the verification activity.
+A design verification traceability report shows test results and coverage for the requirements.
+Finally, reviews are completed and approved after each design verification activity.
+---------------------------------------------------------------------------------------------------
+
+Project management is an integral part of software engineering processes along with business analysis,
+requirement specification, design, programming, and testing
+
+As opposed to a traditional approach, the Agile project management philosophy has been introduced
+as an attempt to make software engineering more flexible and efficient.
+
+The main Agile aspects:
+
+1-Flexibility: The scope of work may change according to new requirements.
+2-Work breakdown: The project consists of small cycles (known as Sprints in Scrum).
+3-Value of teamwork: The team members work closely together and have a clear vision of their responsibilities.
+4-Iterative improvements: There is frequent reassessment of the work done within a cycle to make the final product better.
+5-Cooperation with a client: A customer is closely engaged in the development and can change the requirements
+or accept the team’s suggestions.
+------------------------------------
+Concerning Reducing the risk:
+
+Compared with traditional management approaches, agile offers a number of major benefits, all of which have been studied
+and documented.
+It increases team productivity and employee satisfaction. It minimizes the waste inherent in redundant meetings,
+repetitive planning, excessive documentation, quality defects, and low-value product features.
+By improving visibility and continually adapting to customers’ changing priorities, agile improves customer engagement
+and satisfaction, brings the most valuable products and features to market faster and more predictably, and reduces risk.
+By engaging team members from multiple disciplines as collaborative peers, it broadens organizational experience
+and builds mutual trust and respect.
+Finally, by dramatically reducing the time squandered on micromanaging functional projects,
+it allows senior managers to devote themselves more fully to higher-value work that only they can do:
+creating and adjusting the corporate vision; prioritizing strategic initiatives; simplifying and focusing work;
+assigning the right people to tasks; increasing cross-functional collaboration; and removing impediments to progress.
+

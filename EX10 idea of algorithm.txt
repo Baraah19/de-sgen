@@ -1,0 +1,122 @@
+The algorithm works as follows:
+Initiate a diffusion computation for a blocked process Pi :
+send query(i, i, j) to all processes Pj in the dependent set
+DSi of Pi ;
+numi (i):= |DSi |; waiti (i):= true;
+When a blocked process Pk receives a query(i, j, k):
+if this is the engaging query for process Pi
+then send query(i, k, m) to all Pm in its dependent
+set DSk ;
+numk (i): = |DSk |; waitk (i):= true
+else if waitk (i) then send a reply (i, k, j) to Pj .
+When a process Pk receives a reply(i, j, k):
+if waitk (i)
+then begin
+numk (i):= numk (i) − 1;
+if numk (i)= 0
+then if i=k then declare a deadlock
+else send reply(i, k, m) to the process Pm
+which sent the engaging query.
+
+---------------------------------
+Deadlock Handling Strategies
+1-There are three strategies for handling deadlocks, viz.,
+deadlock prevention, deadlock avoidance, and deadlock
+detection.
+2-Handling of deadlock becomes highly complicated in
+distributed systems because no site has accurate
+knowledge of the current state of the system and because
+every inter-site communication involves a finite and
+unpredictable delay.
+3-Deadlock prevention is commonly achieved either by
+having a process acquire all the needed resources
+simultaneously before it begins executing or by preempting
+a process which holds the needed resource.
+4-This approach is highly inefficient and impractical in
+distributed systems.
+5-In deadlock avoidance approach to distributed systems, a
+resource is granted to a process if the resulting global
+system state is safe (note that a global state includes all
+the processes and resources of the distributed system).
+However, due to several problems, deadlock avoidance is
+impractical in distributed systems.
+6-Deadlock detection requires examination of the status of
+process-resource interactions for presence of cyclic wait.
+7-Deadlock detection in distributed systems seems to be the
+best approach to handle deadlocks in distributed systems.
+8-Deadlock handling using the approach of deadlock
+detection entails addressing two basic issues: First,
+detection of existing deadlocks and second resolution of
+detected deadlocks.
+9-Detection of deadlocks involves addressing two issues:
+Maintenance of the WFG and searching of the WFG for the
+presence of cycles (or knots).
+
+-------------------------------------------------------------
+Correctness Criteria: A deadlock detection algorithm must
+satisfy the following two conditions:
+(i) Progress (No undetected deadlocks):
+The algorithm must detect all existing deadlocks in finite
+time.
+In other words, after all wait-for dependencies for a
+deadlock have formed, the algorithm should not wait for
+any more events to occur to detect the deadlock.
+(ii) Safety (No false deadlocks):
+The algorithm should not report deadlocks which do not
+exist (called phantom or false deadlocks).
+----------------------------------------------------
+We have several models 
+
+The AND model, OR model, AND-OR model, The (pq) model (called the P-out-of-Q model), The unrestricted model
+
+----------------------------------------------------
+Data Structures
+Each process Pi maintains a boolean array, dependenti,
+where dependenti(j) is true only if Pi knows that Pj is
+dependent on it.
+Initially, dependenti (j) is false for all i and j.
+
+The following algorithm determines if a blocked process is
+deadlocked:
+if Pi is locally dependent on itself then declare a deadlock
+else for all Pj and Pk such that
+1-Pi is locally dependent upon Pj , and
+2-Pj is waiting on Pk , and
+3-Pj and Pk are on different sites,send a probe (i, j, k) to the
+home site of Pk
+On the receipt of a probe (i, j, k), the site takes the
+following actions: if
+1-Pk is blocked, and
+2-dependentk (i) is false, and
+3-Pk has not replied to all requests Pj ,
+then
+begin
+dependentk (i) = true;
+if k=i
+then declare that Pi is deadlocked
+else for all Pm and Pn such that
+(a’) Pk is locally dependent upon Pm,
+and
+(b’) Pm is waiting on Pn, and
+(c’) Pm and Pn are on different sites,
+send a probe (i, m, n) to the home site
+of Pn
+end.
+---------------------------------------------------------
+
+There are four classes for the Distributed Detection Algorithm:
+
+1-Path-pushing: In path-pushing algorithms, the detection of distributed deadlocks is
+carried out by maintaining an explicit global WFG. 
+2-Edge-chasing: In an edge-chasing algorithm, probe messages are used to detect the presence of a cycle in a distributed graph
+structure along the edges of the graph.
+3-Diffusion computation: Here, the computation for deadlock detection is dispersed throughout the system’s WFG.
+4-Global state detection: The detection of Distributed deadlocks can be made by 
+taking a snapshot of the system and then inspecting it for signs of a deadlock.
+------------------------------------------------------------------------
+
+
+
+
+
+
